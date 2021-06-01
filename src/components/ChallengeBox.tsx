@@ -4,7 +4,7 @@ import styles from '../styles/components/ChallengeBox.module.css'
 
 export const ChallengeBox: React.FC = () => {
 
-    const { activeChallenge, resetChallenge } = useContext(ChallengesContext);
+    const { activeChallenge, resetChallenge, completeChallenge } = useContext(ChallengesContext);
 
 
     return (
@@ -29,6 +29,7 @@ export const ChallengeBox: React.FC = () => {
                         <button
                             type='button'
                             className={styles.challengeSucceedButton}
+                            onClick={completeChallenge}
                         >
                             Completei
                         </button>
